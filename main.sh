@@ -41,9 +41,16 @@ globalMenu () {
 }
 
 extensionsConf () {
-    
+    wget https://raw.githubusercontent.com/rafaelrpq/gnomeCustomizer/refs/heads/main/extensions.conf
+    dconf load /org/gnome/shell/extensions/ < extensions.conf
 }
 
-flathub > > /dev/null 2>&1
-globalMenu > /dev/null 2>&1
+terminalConf () {
+    echo set completion-ignore-case on | sudo tee -a /etc/inputrc
+}
+
+terminalConf 
+flathub
+globalMenu
+extensionsConf
 gnome-session-quit
