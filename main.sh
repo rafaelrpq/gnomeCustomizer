@@ -23,6 +23,7 @@ globalMenu () {
     sudo apt install git make
     git clone https://github.com/sominemo/Fildem-Gnome-45/
     cd Fildem-Gnome-45
+    cp -r fildemGMenu@gonza.com ~/.local/share/gnome-shell/extensions/
     make
     sudo apt install ./fildem_0.6.7_all.deb -y
     
