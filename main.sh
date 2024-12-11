@@ -25,6 +25,7 @@ globalMenu () {
     cd Fildem-Gnome-45
     cp -r fildemGMenu@gonza.com ~/.local/share/gnome-shell/extensions/
     make
+    wget https://github.com/gonzaarcr/Fildem/releases/download/0.6.7/fildem_0.6.7_all.deb
     sudo apt install ./fildem_0.6.7_all.deb -y
     
     mkdir -p ~/.config/autostart
