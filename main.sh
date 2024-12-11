@@ -20,7 +20,7 @@ flathub () {
 globalMenu () {
     FILDEM=~/.config/autostart/fildem.desktop
 
-    sudo apt install git make
+    sudo apt install git make python3-setuptools
     git clone https://github.com/sominemo/Fildem-Gnome-45/
     cd Fildem-Gnome-45
     cp -r fildemGMenu@gonza.com ~/.local/share/gnome-shell/extensions/
