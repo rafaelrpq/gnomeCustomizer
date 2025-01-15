@@ -3,7 +3,7 @@ flathub () {
 
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-    echo "abi <abi/4.0>,"                                                           >> bwrap
+    echo "abi <abi/4.0>,"                                                            > bwrap
     echo "include <tunables/global>"                                                >> bwrap
     echo ""                                                                         >> bwrap
     echo "profile bwrap /usr/bin/bwrap flags=(unconfined) {"                        >> bwrap
@@ -24,7 +24,6 @@ globalMenu () {
     git clone https://github.com/sominemo/Fildem-Gnome-45/
     cd Fildem-Gnome-45
     cp -r fildemGMenu@gonza.com ~/.local/share/gnome-shell/extensions/
-    make
     wget https://github.com/gonzaarcr/Fildem/releases/download/0.6.7/fildem_0.6.7_all.deb
     sudo apt install ./fildem_0.6.7_all.deb -y
     
